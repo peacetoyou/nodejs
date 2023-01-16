@@ -10,8 +10,8 @@ app.get('/', function (req, res) {
 })
 
 app.get('/sound/:name', (req, res) => {
-    const { name } = req.params
-    res.json({'sound':name})
+    const { nam } = req.params
+    res.json({'sound': nam })
     // if(name == 'dog'){
     //     res.json({'sound':'멍멍'})
     // } else if(name == 'cat'){
