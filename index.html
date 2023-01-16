@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나님이 세상을 이처럼 사랑하사</title>
+</head>
+<body>
+    <h1 id="sound"></h1>
+    <input id="name" type="text">
+    <button onclick="getSound()"> API 요청</button>
+<script>
+    function getSound() {
+        const name = document.getElementById('name').value
+        fetch(`https://port-0-nodejs3-1jx7m2glcyuw9k5.gksl2.cloudtype.app/sound/${name}`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data.sound)
+            document.getElementById('sound').innerHTML = data.sound
+        });
+    }
+</script>
+
+    
+</body>
+</html>
